@@ -142,8 +142,8 @@ docker-osgi-spring-boot-demo
 There are 3 Maven modules / OSGi bundles:
 
 - `spring.boot.demo.one.service.api`: It contains just a Java interface, `DemoOneService`.
-- `spring.boot.demo.one`: A Spring Boot **2.5.8** app which _implements_ `DemoOneService` and accesses a H2 database via a JPA `Repository`.
-- `spring.boot.demo.two`: Another Spring Boot **2.6.2** app, which _uses_ `DemoOneService` from module `spring.boot.demo.one`.
+- `spring.boot.demo.one`: A Spring Boot **2.5.8** app which _implements_ `DemoOneService` and accesses a H2 database via a JPA `Repository`, listening on port **8080**.
+- `spring.boot.demo.two`: Another Spring Boot **2.6.2** app, which _uses_ `DemoOneService` from module `spring.boot.demo.one`, listening on port **8081**.
 
 ## Compile
 
