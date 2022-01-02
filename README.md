@@ -200,7 +200,7 @@ Should yield:
     Hit '<ctrl-d>' or type 'logout' to disconnect shell from current session.
 
     karaf@root()>                                                                                                                     
-  ```
+    ```
   
 3. Install `bundles`:
 
@@ -240,9 +240,9 @@ Should yield:
 4. Start `bundles` 64, 65, and 66 (⚠️ Use whichever number was printed in previous list):
 
     ```
-    start 54 
-    start 55
-    start 56
+    start 64 
+    start 65
+    start 66
     ```
     
     You should be watching Spring Boot log unfold.
