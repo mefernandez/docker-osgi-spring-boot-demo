@@ -77,7 +77,8 @@ As an obvious consequence, starting all modules at once takes longer, like a 50 
 You cannot mix Spring Boot versions between modules. 
 If you need to bump your Spring Boot version, you have to do it for all modules.
 
-If you're unfamiliar with this problema, here's a taste what it could be like:
+If you're unfamiliar with this problem, here's a taste what it could be like:
+
 https://blog.codecentric.de/en/2021/12/migrating-spring-boot-java-17/
 
 # (Plausible) Solution
