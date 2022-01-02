@@ -57,8 +57,8 @@ This raises the following problems:
 
 ## 1. Lack of Isolation
 
-Starting one Spring Boot app that scans all other Spring Boot modules pose a module isolation problem,
-for all beans and `AutoConfiguration` clases will start and live in the same `SpringApplicationContext`.
+Starting one Spring Boot app that scans _all_ other Spring Boot modules pose a module isolation problem,
+for all beans and `AutoConfiguration` classes will start and live in the same `SpringApplicationContext`.
 
 Isolation problems manifest as:
 
