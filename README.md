@@ -21,8 +21,7 @@ However, as we'll see, it presents some old style **Monolith** problems.
 
 ## Advantages
 
-The main advantage is **simplicity**. This _multi-module_ can be thought of 
-just a bunch of Spring Boot apps.
+The main advantage is **simplicity**. This _multi-module_ can be seen as just a bunch of Spring Boot apps.
 
 Any of these can be started with a single click on "Run As -> Java Application".
 
