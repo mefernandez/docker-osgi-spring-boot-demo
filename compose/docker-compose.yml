@@ -1,0 +1,26 @@
+# Docker Compose file for https://github.com/mefernandez/docker-osgi-spring-boot-demo
+
+version: '3.3'
+services:
+  zookeeper-instance:
+      image: zookeeper:3.6.1
+      restart: always
+      hostname: zookeeper-instance
+      ports:
+        - 2181:2181
+        - 9080:8080
+      healthcheck:
+        test: ["CMD-SHELL", "wget http://zookeeper-instance:8080/commands && echo 'OK'"]
+        interval: 5s
+        timeout: 2s
+        retries: 3
+  karaf-instance-1:
+    image: apache/karaf:4.3.1
+    command: ["sh", "-c", "cp /opt/apache-karaf/deploy/*.cfg /opt/apache-karaf/etc/; karaf run clean"]
+    volumes:
+      - ./karaf-instance-1/deploy:/opt/apache-karaf/deploy
+      - "${HOME}/.m2/repository:/root/.m2/repository"
+    ports:
+      - 8101:8101
+    depends_on: 
+      - zookeeper-instance
