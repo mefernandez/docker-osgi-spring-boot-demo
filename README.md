@@ -81,7 +81,7 @@ If you're unfamiliar with this problem, here's a taste what it could be like:
 
 https://blog.codecentric.de/en/2021/12/migrating-spring-boot-java-17/
 
-# (Plausible) Solution
+# A (plausible) Solution
 
 I've been thinking about all this for a while. I've known about OSGi for many years now, but never had the chance to play around with it.
 But somehow, I kept thinking it would be a good match for the aforementioned problems.
