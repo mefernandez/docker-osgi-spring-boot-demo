@@ -271,7 +271,7 @@ Should yield:
     ```
 
 2. Try http://192.168.128.3:8080/service. That's DemoOneController calling `count()` on DemoOneService implemented on this very module.
-3. Try http://192.168.128.3:8081/service. That's DemoTwoController calling `count()` on DemoOneService as well!
+3. Try http://192.168.128.3:8081/service. That's DemoTwoController calling `count()` **on DemoOneService as well!!!**
 
 ## Caveats
 
