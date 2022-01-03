@@ -91,7 +91,7 @@ The solution I'm about to unfold really took shape when I read this excellent ar
 
 That's the spark I needed.
 
-Although Antonio's solution focuses on **Remote Services**, his article plus [GitHub repository](https://docs.github.com/es/get-started/using-github/keyboard-shortcuts) provides  examples of the following:
+Although Antonio's solution focuses on **Remote Services**, [his article on Remote µServices](https://techblog.smc.it/en/2020-07-31/cosa-sono-osgi-remote-services) plus [GitHub repository](https://github.com/smclab/docker-osgi-remote-services-example) provides  examples of the following:
 
 - How to config and run Karaf on Docker
 - How to code Declarative Services
