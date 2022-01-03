@@ -278,6 +278,8 @@ As usual, this solution is not free from inconveniences.
 
 Hare are some:
 
-- Feedback cycle: You need to `mvn install` for every change, instead of just hitting `CTRL+S` on the editor and `F5` on the browser.
-- Debug: You can't do "Debug As -> Java application" just as easily. You need to setup `JAVA_TOOL_OPTS` and do "Remote Debug".
-- Gateway: All-in-one Spring Boot app gives you one port 8080 to access all endpoints. With this approach (as is right now), you get 8080, 8081, etc. You need a gateway/router.
+- **Feedback cycle**: You need to `mvn install` for every change, instead of just hitting `CTRL+S` on the editor and `F5` on the browser.
+- **Debug**: You can't do "Debug As -> Java application" just as easily. You need to setup `JAVA_TOOL_OPTS` and do "Remote Debug".
+- **Gateway**: All-in-one Spring Boot app gives you one port 8080 to access all endpoints. With this approach (as is right now), you get 8080, 8081, etc. You need a gateway/router.
+- **Community**: I had a hard time finding answers to troubleshoot several issues with Karaf and OSGi in general. It seems there's little adoption. It also surprised me there is no integration between Spring Framework and OSGi; Spring Dynamic Modules is a dead project, moved to Eclipse foundation and seems to be inactive. I keep wondering why. In my opinion, Spring and OSGi fit very well together.
+
