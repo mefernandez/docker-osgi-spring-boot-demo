@@ -15,12 +15,13 @@ services:
         timeout: 2s
         retries: 3
   karaf-instance-1:
-    image: apache/karaf:4.3.1
-    command: ["sh", "-c", "cp /opt/apache-karaf/deploy/*.cfg /opt/apache-karaf/etc/; karaf run clean"]
+    image: apache/karaf:4.3.6
+    command: ["sh", "-c", "cp /opt/apache-karaf/deploy/* /opt/apache-karaf/etc/; karaf run clean"]
     volumes:
       - ./karaf-instance-1/deploy:/opt/apache-karaf/deploy
       - "${HOME}/.m2/repository:/root/.m2/repository"
     ports:
       - 8101:8101
+      - 8181:8181 # Puerto del feature:install pax-web-http
     depends_on: 
       - zookeeper-instance

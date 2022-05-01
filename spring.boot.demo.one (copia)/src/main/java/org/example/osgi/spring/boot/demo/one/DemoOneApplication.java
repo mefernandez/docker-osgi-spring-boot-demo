@@ -3,7 +3,7 @@ package org.example.osgi.spring.boot.demo.one;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 
-//import org.apache.catalina.webresources.TomcatURLStreamHandlerFactory;
+import org.apache.catalina.webresources.TomcatURLStreamHandlerFactory;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceReference;
@@ -28,7 +28,7 @@ public class DemoOneApplication implements BundleActivator {
 	public void start(BundleContext context) throws Exception {
 		System.out.println("DemoOneApplication.start(BundleContext context)");
 		
-//		TomcatURLStreamHandlerFactory.disable();
+		TomcatURLStreamHandlerFactory.disable();
 		
         Thread.currentThread().setContextClassLoader(this.getClass().getClassLoader());
         
@@ -53,10 +53,9 @@ public class DemoOneApplication implements BundleActivator {
 		HttpService service = context.getService(httpServiceRef);
 		System.out.println("DemoOneApplication HttpService: " + service);
 		
-		System.out.println("DemoOneApplication Trying ... HttpService.registerServlet /one-servlet");
+		System.out.println("DemoOneApplication HttpService.registerServlet /one-servlet");
 		HttpContext httpContext = service.createDefaultHttpContext();
 		service.registerServlet("/one-servlet", springServlet, null, httpContext);
-		System.out.println("DemoOneApplication Success .. HttpService.registerServlet /one-servlet");
 }
 
 	@Override
