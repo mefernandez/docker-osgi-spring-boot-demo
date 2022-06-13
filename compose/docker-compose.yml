@@ -15,7 +15,7 @@ services:
         timeout: 2s
         retries: 3
   karaf-instance-1:
-    image: apache/karaf:4.3.6
+    image: apache/karaf:4.4.0
     command: ["sh", "-c", "cp /opt/apache-karaf/deploy/* /opt/apache-karaf/etc/; karaf run clean"]
     volumes:
       - ./karaf-instance-1/deploy:/opt/apache-karaf/deploy
